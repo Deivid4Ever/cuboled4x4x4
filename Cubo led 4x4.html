@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Cubo Led 4x4x4 </title>
+        <meta meta name="description" content="¡Bienvenido a nuestro proyecto del Cubo LED 4x4! Este innovador y visualmente impresionante dispositivo utiliza 64 LEDs dispuestos en una matriz tridimensional para crear espectaculares efectos de luz. Ideal para aficionados a la electrónica y la programación, este proyecto no solo es un desafío divertido, sino también una excelente oportunidad para aprender sobre control de LEDs, matrices 3D y microcontroladores. Únete a nosotros para explorar el fascinante mundo de las luces interactivas y la tecnología creativa.">
+        <link rel="icon" type="image/svg+xml" href="assets/images/header/cubitove.webp">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+ <style>
+        @import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
+
+        :root {
+            --m: 1rem; /* Cambia este valor para ajustar el tamaño del botón */
+            --red: #FF6565;
+            --pink: #FF64F9;
+            --purple: #6B5FFF;
+            --blue: #4D8AFF;
+            --green: #5BFF89;
+            --yellow: #FFEE55;
+            --orange: #FF6D1B;
+            --gray-light: #ecf0f0; /* Gris claro más intenso */
+            --gray-dark: #dbe0e0; /* Gris oscuro más intenso */
+        }
+
+        .animated-button {
+            border: calc(0.08 * var(--m)) solid transparent;
+            position: relative;
+            color: #141516; /* Cambia el color del texto si es necesario */
+            font-family: 'Space Grotesk';
+            font-size: var(--m);
+            border-radius: calc(0.7 * var(--m));
+            padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--gray-light), var(--gray-dark)), 
+                        linear-gradient(var(--gray-light) 50%, rgba(224, 224, 224, 0.6) 80%, rgba(224, 224, 224, 0)),  
+                        linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+            background-origin: border-box;
+            background-clip: padding-box, border-box, border-box;
+            background-size: 200%;
+            animation: animate 2s infinite linear;
+        }
+
+        .animated-button::before {
+            content: '';
+            background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+            height: 30%;
+            width: 60%;
+            position: absolute;
+            bottom: -20%;
+            z-index: -5;
+            background-size: 200%;
+            animation: animate 2s infinite linear;
+            filter: blur(calc(0.8 * var(--m)));
+        }
+
+        .animated-button:hover, .animated-button:hover::before {
+            animation: animate 0.5s infinite linear;
+        }
+
+        @keyframes animate {
+            0% {background-position: 0}
+            100% {background-position: 200%}
+        }
+
+        @media screen and (max-width: 1000px) {
+            :root {
+                --m: 2rem; /* Ajusta el tamaño para pantallas más pequeñas */
+            }
+        }
+    </style>
+    </head>
+	
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Proyecto de robotica | Grupo 6</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Cubo led 4x4x4</h1>
+                                <div class="brand-line-primary"></div>
+                                <p class="curso-descripcion"> ¡Bienvenido a nuestro proyecto del Cubo LED 4x4! Este innovador y visualmente impresionante dispositivo utiliza 64 LEDs dispuestos en una matriz tridimensional para crear espectaculares efectos de luz. Ideal para aficionados a la electrónica y la programación, este proyecto no solo es un desafío divertido, sino también una excelente oportunidad para aprender sobre control de LEDs, matrices 3D y microcontroladores. Únete a nosotros para explorar el fascinante mundo de las luces interactivas y la tecnología creativa.</p>
+								
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/cubitove.webp" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="definicion section bg-base-light" id="¿Qué es un Cubo Led 4x4?">
+            <div class="container">
+                <h2> ¿Qué es un Cubo Led 4x4?</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li> <span>Es una estructura tridimensional compuesta por 64 diodos emisores de luz (LED), dispuestos en un formato de 4 capas por 4 filas por 4 columnas. Cada LED puede ser controlado de forma independiente, permitiendo crear una variedad de efectos visuales y patrones luminosos. Estos cubos son utilizados en aplicaciones que van desde la visualización de datos y el entretenimiento hasta el diseño artístico y la experimentación con efectos de luz. Su capacidad para mostrar imágenes y animaciones en tres dimensiones ofrece una experiencia visual dinámica e innovadora.</span></li>
+							<p></p>
+							<p>¿Aun tienes dudas? <a href="https://texolab.net/2021/03/05/cubo-led-de-4x4x4-con-arduino-mega-2560/" target="_blank">Da click aqui para más información.</a> </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		
+		
+		
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Indice web</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-play"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#introduccion">Video demostrativo</a></span></div>
+                                            <div class="col-auto"> <a class="animated-button" href="#introduccion">Ir</a></div>
+                                        </div>
+                                    </li>
+									
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#aplicaciones">Aplicaciones del Cubo Led</a></span></div>
+                                            <div class="col-auto"> <a class="animated-button" href="#aplicaciones">Ver más</a></div>
+                                        </div>
+                                    </li>
+									
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#construccion">Construcción del Cubo Led 4x4</a></span></div>
+                                            <div class="col-auto"> <a class="animated-button" href="#construccion">Ver más</a></div>
+                                        </div>
+                                    </li>
+											
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">3</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#Proyexp">Proyectos y Experimentos</a></span></div>
+                                            <div class="col-auto"> <a class="animated-button" href="#Proyexp">Ver más</a></div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#autores">Autores y Creditos</a></span></div>
+                                            <div class="col-auto"> <a class="animated-button" href="#autores">Ver más</a></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="animated-button" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="introduccion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Video demostrativo </h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/JACwa8wgQVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                <div class="card-body mt-0">
+                                    <p>En este video, se muestra el proceso de construcción y funcionamiento de nuestro cubo LED 4x4x4. Este video te permitirá observar cada etapa de la creación de este innovador dispositivo, desde el ensamblaje de sus componentes hasta la programación de los patrones de luz. Además, podrás ver el cubo LED en acción, desplegando una variedad de efectos visuales que ilustran su capacidad para crear experiencias luminosas en tres dimensiones. Esperamos que disfrutes de esta demostración y te inspires con las posibilidades que ofrece esta tecnología.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="aplicaciones">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>1. Aplicaciones del Cubo Led </h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <h2>➠ Aprendizaje y Educación:<h2>
+
+                        <p>» Programación y Electrónica: Es una herramienta educativa excelente para aprender sobre programación, electrónica y microcontroladores. Los estudiantes pueden aprender a escribir código para controlar los LEDs y crear patrones de luces.</p>
+                        <p>» Proyectos DIY: Es un proyecto popular entre los entusiastas de la electrónica y los makers, proporcionando una plataforma para experimentar con la construcción de circuitos y la programación de microcontroladores como Arduino.</p>
+						
+						<h2>➠ Arte y Entretenimiento:<h2>
+						
+						<p>» Visualización de Música: Puede ser usado como un visualizador de música, donde los LEDs se iluminan al ritmo de la música, creando efectos visuales dinámicos.</p>
+						<p>» Decoración: Se utiliza como una pieza decorativa en eventos, hogares o lugares públicos, proporcionando efectos de iluminación atractivos y únicos.</p>
+						
+						<h2>➠ Publicidad y Presentaciones:<h2>
+						
+						<p>» Displays Publicitarios: Puede ser utilizado en escaparates de tiendas o stands de ferias para atraer la atención con efectos de luz llamativos.</p>
+						<p>» Presentaciones y Exhibiciones: En exposiciones tecnológicas y ferias, un cubo LED puede mostrar logotipos animados, textos y gráficos para captar la atención del público.</p>
+						
+						<h2>➠ Desarrollo de Juegos:<h2>
+						
+						<p>» Juegos de Luces: Puede ser programado para crear simples juegos de luces, donde los usuarios interactúan con el cubo presionando botones o utilizando otros sensores.</p>
+						
+						<h2>➠ Investigación y Desarrollo:<h2>
+						
+						<p>» Prototipos y Pruebas: Es útil en el desarrollo de nuevos productos de iluminación y visualización, permitiendo probar y visualizar diferentes configuraciones y algoritmos de control de luces.</p>
+                                </div>
+                            </a></section>
+
+            <div id="construccion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>2. Construcción del Cubo Led 4x4 </h1>
+                    </div> 
+                    <div class="jumbotron bg-white">
+                        <h1>Paso a paso:<h1>
+
+                        <div class="sub-line mt-5">
+                            <h2>1. Planificación y Diseño</h2>
+                        </div>
+
+                        <p>Diseña el esquema del cubo. Un cubo 4x4x4 tiene 4 capas con 16 LEDs cada una.</p>
+                        <p>Cada LED tiene un ánodo (+) y un cátodo (-). En este proyecto, los cátodos estarán comúnmente conectados en capas.</p>
+						
+						<div class="sub-line mt-5">
+                            <h2>2. Preparación de LEDs</h2>
+                        </div>
+						
+						<p>Dobla las patas de los LEDs para facilitar la conexión.</p>
+						<p>Forma una matriz de 4x4 LEDs con sus ánodos apuntando hacia arriba.</p>
+						
+						<div class="sub-line mt-5">
+                            <h2>3. Soldadura de Matrices de LEDs</h2>
+                        </div>
+						
+						<p>Suelda los cátodos de cada fila de LEDs.</p>
+						<p>Luego, conecta las filas entre sí para formar una capa de 4x4 LEDs con los cátodos comunes.</p>
+						<p>Repite el proceso para crear 4 capas de LEDs.</p>
+						
+						<div class="sub-line mt-5">
+                            <h2>4. Montaje del Cubo</h2>
+                        </div>
+						
+						<p>Coloca una capa sobre otra y suelda los ánodos verticalmente.</p>
+						<p>Asegúrate de que cada columna de 4 LEDs tenga sus ánodos conectados en vertical.</p>
+						
+						
+						<p></p>
+						<p></p>
+						
+                </div>
+            </div>
+
+            <div id="Proyexp">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>3. Proyectos y Experimentos</h1>
+                    </div>
+                    <div id="31"> </div>
+                    <div class="jumbotron bg-white">
+                        <p>gay el q lo lea</p>
+                    </div>
+              
+<div id="autores">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Autores y creditos</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Nombre del miembro del grupo </th>
+                                    <th class="text-center">Aportes </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>David Caro Otero </strong></td>
+                                    <td>Programación y creación de la pagina </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><strong>Andres Felipe Monterrosa Cantillo </strong></td>
+                                    <td>Financiamiento del proyecto</td>
+
+                                </tr>
+							    <tr>
+                                    <td><strong>Valeria Sofia Bustamante </strong></td>
+                                    <td>Supervisión y finianciamiento del proyecto </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+			
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliograficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Nombre de la fuente o autor </th>
+                                    <th class="text-center">Tipo de informacion </th>
+                                    <th class="text-center">Enlace del Recurso </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Steren - Cubo led 4X4X4 </strong></td>
+                                    <td>Diagramas e información general </td>
+                                    <td> <a href="https://www.steren.com.mx/media/wysiwyg/paquetes-diagrama/Cubo%20LED%204%20x%204%20x%204.pdf" target="_blank"><span class="fa fa-external-link mr-3" aria-hidden="true"></span>Ver fuente</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Codepen </strong></td>
+                                    <td>Botones Animados css</td>
+                                    <td> <a href="https://codepen.io/Juxtopposed/pen/JjVXRey?editors=0110" target="_blank"><span class="fa fa-external-link mr-3" aria-hidden="true"></span>Ver fuente</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        <section id="footerproultrahd4k">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"></span><span>despues veo que pongo aca xd</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>
