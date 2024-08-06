@@ -12,6 +12,145 @@
         <link href="assets/css/animate.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/main.css">
  <style>
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic');
+
+#contact * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#contact {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#contact fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#contact ::-webkit-input-placeholder {
+  color: #888;
+}
+
+#contact :-moz-placeholder {
+  color: #888;
+}
+
+#contact ::-moz-placeholder {
+  color: #888;
+}
+
+#contact :-ms-input-placeholder {
+  color: #888;
+}
+
+
+ </style>
+		
+ <style>
         @import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
 
         :root {
@@ -116,7 +255,7 @@
 		
 		
 		
-		
+	
         <section class="curso-indice-tematico section" id="IndiceTematico">
             <div class="container">
                 <h2>Indice web</h2>
@@ -207,12 +346,15 @@
                                 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/JACwa8wgQVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
                                 <div class="card-body mt-0">
                                     <p>En este video, se muestra el proceso de construcción y funcionamiento de nuestro cubo LED 4x4x4. Este video te permitirá observar cada etapa de la creación de este innovador dispositivo, desde el ensamblaje de sus componentes hasta la programación de los patrones de luz. Además, podrás ver el cubo LED en acción, desplegando una variedad de efectos visuales que ilustran su capacidad para crear experiencias luminosas en tres dimensiones. Esperamos que disfrutes de esta demostración y te inspires con las posibilidades que ofrece esta tecnología.</p>
-                                </div>
+                                			</a></section>
+								
+								</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div id="aplicaciones">
                 <div class="container">
                     <div class="header-ecored">
@@ -241,9 +383,11 @@
 						<h2>➠ Investigación y Desarrollo:<h2>
 						
 						<p>» Prototipos y Pruebas: Es útil en el desarrollo de nuevos productos de iluminación y visualización, permitiendo probar y visualizar diferentes configuraciones y algoritmos de control de luces.</p>
-                                </div>
-                            </a></section>
-
+                                
+                            
+			    </div>
+			</div>
+			
             <div id="construccion">
                 <div class="container">
                     <div class="header-ecored">
@@ -281,9 +425,23 @@
 						<p>Coloca una capa sobre otra y suelda los ánodos verticalmente.</p>
 						<p>Asegúrate de que cada columna de 4 LEDs tenga sus ánodos conectados en vertical.</p>
 						
+	                    <div class="sub-line mt-5">
+                            <h2>5. Conexión al Controlador</h2>
+                        </div>
 						
-						<p></p>
-						<p></p>
+						<p>Conecta el microcontrolador a la placa de LEDs. Los pines del microcontrolador se conectarán a los transistores para controlar los LEDs.</p>
+						<p>Escribe el código necesario para controlar el cubo. Esto incluirá la secuencia de encendido y apagado de los LEDs para crear patrones y efectos visuales. Puedes usar librerías específicas para cubos LED si estás utilizando un controlador como Arduino.</p>
+						
+						<div class="sub-line mt-5">
+                            <h2>6. Montaje Final</h2>
+                        </div>
+						
+						<p>(Opcional) Si deseas, puedes montar el cubo en una estructura o caja para protegerlo y darle una apariencia más acabada.</p>
+						<p>Prueba el cubo para asegurarte de que todos los LEDs funcionen correctamente y que el controlador pueda generar los efectos deseados.</p>
+						
+						<h1>¡Y Listo!</h1>
+						<p>Tienes un cubo led 100% funcional y personalizable.</p>
+
 						
                 </div>
             </div>
@@ -291,11 +449,11 @@
             <div id="Proyexp">
                 <div class="container">
                     <div class="header-ecored">
-                        <h1>3. Proyectos y Experimentos</h1>
+                        <h1>3. Nuestro proceso</h1>
                     </div>
                     <div id="31"> </div>
                     <div class="jumbotron bg-white">
-                        <p>gay el q lo lea</p>
+                        <p>Se actualizara la pagina cuando se tenga documentado todo el proceso.</p>
                     </div>
               
 <div id="autores">
@@ -364,14 +522,17 @@
                 </div>
             </div>
 
+      <span class="rabbit"></span>
+
         <section id="footerproultrahd4k">
             <div class="container">
-                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"></span><span>despues veo que pongo aca xd</span></div>
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"></span><span>© 2024 | Todos los derechos reservados.</span></div>
             </div>
         </section><a class="scroll-to-top-btn">
             <div class="fa fa-angle-up fa-2x"></div>
         </a>
         <script src="assets/js/vendor.js"></script>
         <script src="js/local.js"></script>
+		
     </body>
 </html>
